@@ -1,3 +1,7 @@
+/*
+v1.0 17/09/2025
+https://cdn.jsdelivr.net/gh/yuvalAshkenaz/default-styles/default-styles.css
+*/
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: unset;
@@ -332,4 +336,5 @@ html #wpadminbar {
 .delay12 {
 	-webkit-transition-delay: 1.2s;
 	transition-delay: 1.2s;
+
 }
