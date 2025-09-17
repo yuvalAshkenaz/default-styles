@@ -1,0 +1,61 @@
+/*!
+ * main.scss
+ * Root SCSS file that imports all partials
+ *  by Dooble
+ */
+
+/* -------------------------------------------------
+   1. ABSTRACTS – Variables, Functions & Mixins
+   ------------------------------------------------- */
+/* Global variables (colors, typography, breakpoints, etc.)*/
+@import "scss/abstracts/variables";
+
+@import "scss/abstracts/functions";
+
+@import "scss/abstracts/mixins";
+
+
+/* -------------------------------------------------
+   2. BASE – Global styles
+   ------------------------------------------------- */
+/* Browser reset or normalize*/
+@import "scss/base/reset";
+
+@import "scss/base/typography";
+
+@import "scss/base/utilities";
+
+@import "scss/layout/containers";
+
+/* -------------------------------------------------
+   3. LAYOUT – Page structure
+   ------------------------------------------------- */
+@import "scss/layout/grid";
+
+@import "scss/layout/header";
+
+@import "scss/layout/footer";
+
+
+/* -------------------------------------------------
+   4. COMPONENTS – Reusable UI elements
+   ------------------------------------------------- */
+@import "scss/components/buttons";
+
+@import "scss/components/forms";
+
+@import "scss/components/cards";
+
+@import "scss/components/modal";
+
+@import "scss/components/dropdown";
+
+@import "scss/components/alerts";
+
+
+/* -------------------------------------------------
+   6. THEMES – Skins / color schemes
+   ------------------------------------------------- */
+@import "scss/themes/light";
+
+@import "scss/themes/dark";

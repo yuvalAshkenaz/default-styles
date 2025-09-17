@@ -1,0 +1,39 @@
+/*!
+ * _buttons.scss
+ * Fancy buttons with gradient & animations
+ */
+
+// Base style
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 9999px; // pill shape
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  @include button-variant($primary);
+}
+
+// Variants
+.btn-secondary   { @include button-variant($secondary); }
+.btn-success     { @include button-variant($success); }
+.btn-warning     { @include button-variant($warning, #000); }
+.btn-danger      { @include button-variant($danger); }
+
+// Sizes
+.btn-sm {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+.btn-lg {
+  padding: 0.85rem 2rem;
+  font-size: 1.25rem;
+}
