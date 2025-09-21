@@ -12,6 +12,47 @@
   }
 }
 
+// Mixin to generate utilities classes from a map
+@mixin generate-utilities($breakpoints) {
+  // Display
+  @each $d in $display-values {
+    .d-#{$d} { display: #{$d} !important; }
+  }
+
+  // Flex direction
+  @each $fd in $flex-directions {
+    .flex-#{$fd} { flex-direction: #{$fd} !important; }
+  }
+
+  // Justify content
+  @each $j in $justify-values {
+    .justify-#{$j} { justify-content: flex-#{$j} !important; }
+  }
+
+  // Align items
+  @each $ai in $align-items-values {
+    .items-#{$ai} { align-items: #{$ai} !important; }
+  }
+
+  // Responsive versions
+  @each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+      @each $d in $display-values {
+        .d-#{$key}-#{$d} { display: #{$d} !important; }
+      }
+      @each $fd in $flex-directions {
+        .flex-#{$key}-#{$fd} { flex-direction: #{$fd} !important; }
+      }
+      @each $j in $justify-values {
+        .justify-#{$key}-#{$j} { justify-content: flex-#{$j} !important; }
+      }
+      @each $ai in $align-items-values {
+        .items-#{$key}-#{$ai} { align-items: #{$ai} !important; }
+      }
+    }
+  }
+}
+
 
 // Create a styled button with hover effects
 @mixin button-variant($bg, $color: #fff) {

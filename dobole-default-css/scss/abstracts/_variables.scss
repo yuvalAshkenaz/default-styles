@@ -1,4 +1,24 @@
 // --------------------------------------------------
+// Bbreakpoints 
+// --------------------------------------------------
+$breakpoints: (
+  540: 540px,
+  720: 720px,
+  960: 960px,
+  1140: 1140px,
+  1460: 1460px,
+  1920: 1920px
+);
+
+$display-values: none none block inline inline-block flex inline-flex;
+
+$flex-directions: row row column row-reverse column-reverse;
+
+$justify-values: start start center end between around evenly;
+
+$align-items-values: start start center end stretch baseline;
+
+// --------------------------------------------------
 // Containers
 // --------------------------------------------------
 $container-sizes: (
