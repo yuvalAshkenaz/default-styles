@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltips – Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../dobole-default-css.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Tooltips – Documentation</h1>
+  <p>
+    The tooltip component displays additional information when the user hovers
+    or focuses on an element.
+  </p>
+
+  <h2>Examples</h2>
+  <div class="example">
+    <button class="btn" data-tooltip="Tooltip from the top" data-tooltip-placement="top">Top</button>
+    <button class="btn" data-tooltip="Tooltip from the bottom" data-tooltip-placement="bottom">Bottom</button>
+    <button class="btn" data-tooltip="Tooltip at the start of the element" data-tooltip-placement="start">Start</button>
+    <button class="btn" data-tooltip="Tooltip at the end of the element" data-tooltip-placement="end">End</button>
+  </div>
+
+  <h2>HTML Code</h2>
+  <div class="code-block">
+<pre>
+&lt;button class="btn" data-tooltip="Tooltip from the top" data-tooltip-placement="top"&gt;Top&lt;/button&gt;
+&lt;button class="btn" data-tooltip="Tooltip from the bottom" data-tooltip-placement="bottom"&gt;Bottom&lt;/button&gt;
+&lt;button class="btn" data-tooltip="Tooltip at the start of the element" data-tooltip-placement="start"&gt;Start&lt;/button&gt;
+&lt;button class="btn" data-tooltip="Tooltip at the end of the element" data-tooltip-placement="end"&gt;End&lt;/button&gt;
+</pre>
+  </div>
+
+  <h2>Using JavaScript</h2>
+  <p>
+    Import the <code>initTooltips()</code> function and call it after the document
+    has loaded:
+  </p>
+  <div class="code-block">
+<pre>
+import { initTooltips } from '../js/tooltips.js';
+
+document.addEventListener('DOMContentLoaded', () =&gt; {
+  initTooltips();
+});
+</pre>
+  </div>
+
+  <script src="../js/bundle.js"></script>
+
+</body>
+</html>
