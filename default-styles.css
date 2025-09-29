@@ -1,5 +1,5 @@
 /*
-v1.0 17/09/2025
+v1.1 29/09/2025
 https://cdn.jsdelivr.net/gh/yuvalAshkenaz/default-styles/default-styles.css
 */
 @media (prefers-reduced-motion: no-preference) {
@@ -289,6 +289,11 @@ html #wpadminbar {
 		overflow: hidden;
 	}
 }
+@media all and (max-width: 479px) {
+	#wp-admin-bar-root-default > li:nth-child(8) ~ li {
+		display: none !important;
+	}
+}
 .animate-zoom-bg {
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
@@ -338,3 +343,4 @@ html #wpadminbar {
 	transition-delay: 1.2s;
 
 }
+
