@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Menu – Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .mega-menu { margin: 0; padding: 0; list-style: none; display: flex; gap: 1rem; }
+    .mega-menu > li { position: relative; }
+    .mega-menu a { text-decoration: none; padding: 0.5rem 1rem; display: block; color: #333; font-weight: 500; }
+    .mega-menu a:hover, .mega-menu a:focus { background: #f0f0f0; outline: none; }
+    .mega-menu ul { display: none; position: absolute; top: 100%; left: 0; background: #fff; padding: 1rem; min-width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 0.5rem; flex-direction: column; }
+    .mega-menu li:hover > ul, .mega-menu li:focus-within > ul { display: flex; }
+    .mega-menu li ul li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<h1>Mega Menu – Documentation</h1>
+<p>High-quality accessible mega menu with hover, focus, keyboard navigation, ARIA attributes, and multi-column layout.</p>
+
+<!-- Section: Default Mega Menu -->
+<div class="section">
+<h2>Default Mega Menu</h2>
+<div class="example">
+<ul class="mega-menu">
+  <li>
+    <a href="#" aria-haspopup="true" aria-expanded="false">Products</a>
+    <ul role="menu" aria-label="Products Submenu">
+      <li><a href="#">New Arrivals</a></li>
+      <li><a href="#">Best Sellers</a></li>
+      <li><a href="#">Sale Items</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#" aria-haspopup="true" aria-expanded="false">Services</a>
+    <ul role="menu" aria-label="Services Submenu">
+      <li><a href="#">Consulting</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Custom Solutions</a></li>
+    </ul>
+  </li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+<pre><code>
+&lt;ul class="mega-menu"&gt;
+  &lt;li&gt;
+    &lt;a href="#" aria-haspopup="true" aria-expanded="false"&gt;Products&lt;/a&gt;
+    &lt;ul role="menu" aria-label="Products Submenu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;New Arrivals&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Best Sellers&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sale Items&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+
+<!-- Section: Multi-column Mega Menu -->
+<div class="section">
+<h2>Multi-column Mega Menu</h2>
+<div class="example">
+<ul class="mega-menu">
+  <li>
+    <a href="#" aria-haspopup="true" aria-expanded="false">Products</a>
+    <ul role="menu" aria-label="Products Submenu" style="flex-direction: row; gap: 2rem;">
+      <li>
+        <strong>Category 1</strong>
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+      </li>
+      <li>
+        <strong>Category 2</strong>
+        <a href="#">Item 4</a>
+        <a href="#">Item 5</a>
+        <a href="#">Item 6</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+</div>
+<pre><code>
+&lt;ul class="mega-menu"&gt;
+  &lt;li&gt;
+    &lt;a href="#" aria-haspopup="true" aria-expanded="false"&gt;Products&lt;/a&gt;
+    &lt;ul role="menu" aria-label="Products Submenu"&gt;
+      &lt;li&gt;&lt;strong&gt;Category 1&lt;/strong&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Category 2&lt;/strong&gt;&lt;a href="#"&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+
+<script src="../dist/js/dooble-ui-bundle.js"></script>
+
+</body>
+</html>

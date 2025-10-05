@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards UI Kit – Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Cards UI Kit – Documentation</h1>
+<p>All card types: hover effects, flip, badges, glass, header/footer, images, responsive, dark mode.</p>
+
+<!-- Standard Cards -->
+<section>
+<h2>Standard Cards</h2>
+<div class="card-grid example">
+  <div class="card card-sm">
+    <div class="card-header">Header</div>
+    <div class="card-body"><h4>Card Title</h4><p>Normal card.</p></div>
+    <div class="card-footer"><button class="btn btn-primary">Action</button></div>
+  </div>
+  <div class="card hover-scale card-sm">
+    <div class="card-header">Header</div>
+    <div class="card-body"><h4>Card Title</h4><p>Scale hover effect.</p></div>
+    <div class="card-footer"><button class="btn btn-primary">Action</button></div>
+  </div>
+  <div class="card hover-glow card-md">
+    <div class="card-header">Header</div>
+    <div class="card-body"><h4>Glow Card</h4><p>Hover glow effect.</p></div>
+    <div class="card-footer"><button class="btn btn-success">Go</button></div>
+  </div>
+</div>
+<pre><code>&lt;div class="card hover-scale card-sm"&gt;...&lt;/div&gt;</code></pre>
+</section>
+
+<!-- Cards with Images -->
+<section>
+<h2>Cards with Images</h2>
+<div class="card-grid example">
+  <div class="card hover-outline card-md">
+    <img class="card-img" src="https://via.placeholder.com/300x150" alt="Image">
+    <div class="card-header">Header</div>
+    <div class="card-body"><h4>Image Card</h4><p>Card with image.</p></div>
+    <div class="card-footer"><button class="btn btn-primary">Learn</button></div>
+  </div>
+</div>
+<pre><code>&lt;img class="card-img" src="..." alt="..."&gt;</code></pre>
+</section>
+
+<!-- Cards with Badges -->
+<section>
+<h2>Cards with Badges</h2>
+<div class="card-grid example">
+  <div class="card hover-scale card-sm">
+    <div class="card-header">Header <span class="card-badge success">New</span></div>
+    <div class="card-body"><h4>Badge Card</h4><p>Card with badge label.</p></div>
+    <div class="card-footer">
+      <button class="btn btn-primary">Buy</button>
+      <button class="btn btn-secondary">Info</button>
+    </div>
+  </div>
+</div>
+<pre><code>&lt;span class="card-badge success"&gt;New&lt;/span&gt;</code></pre>
+</section>
+
+<!-- Glass Cards -->
+<section>
+<h2>Glassmorphism Cards</h2>
+<div class="card-grid example">
+  <div class="card glass hover-glow card-md">
+    <div class="card-header">Glass Header</div>
+    <div class="card-body"><h4>Glass Card</h4><p>Glass blur effect.</p></div>
+    <div class="card-footer"><button class="btn btn-info">Details</button></div>
+  </div>
+</div>
+<pre><code>&lt;div class="card glass hover-glow"&gt;...&lt;/div&gt;</code></pre>
+</section>
+
+<script src="../dist/js/dooble-ui-bundle.js"></script>
+
+</body>
+</html>

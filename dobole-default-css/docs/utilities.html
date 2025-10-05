@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utilities - Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Utilities - Documentation</h1>
+  <p>Demonstration of SCSS utilities: display, flex direction, justify-content, align-items, and responsive breakpoints.</p>
+
+  <!-- Display Utilities -->
+  <section>
+    <h2>Display Utilities</h2>
+    <div class="example">
+      <div class="d-none">d-none (hidden)</div>
+      <div class="d-block">d-block (block)</div>
+      <div class="d-inline">d-inline (inline)</div>
+      <div class="d-inline-block">d-inline-block</div>
+      <div class="d-flex">d-flex (flex)</div>
+      <div class="d-inline-flex">d-inline-flex</div>
+    </div>
+    <pre><code>&lt;div class="d-none"&gt;Hidden&lt;/div&gt;
+&lt;div class="d-flex"&gt;Flex&lt;/div&gt;</code></pre>
+  </section>
+
+  <!-- Flex Direction -->
+  <section>
+    <h2>Flex Direction</h2>
+    <div class="example d-flex">
+      <div class="flex-row">flex-row</div>
+      <div class="flex-column">flex-column</div>
+      <div class="flex-row-reverse">flex-row-reverse</div>
+      <div class="flex-column-reverse">flex-column-reverse</div>
+    </div>
+    <pre><code>&lt;div class="d-flex flex-column"&gt;...&lt;/div&gt;</code></pre>
+  </section>
+
+  <!-- Justify Content -->
+  <section>
+    <h2>Justify Content</h2>
+    <div class="example d-flex">
+      <div class="justify-start">justify-start</div>
+      <div class="justify-center">justify-center</div>
+      <div class="justify-end">justify-end</div>
+      <div class="justify-between">justify-between</div>
+      <div class="justify-around">justify-around</div>
+      <div class="justify-evenly">justify-evenly</div>
+    </div>
+    <pre><code>&lt;div class="d-flex justify-center"&gt;...&lt;/div&gt;</code></pre>
+  </section>
+
+  <!-- Align Items -->
+  <section>
+    <h2>Align Items</h2>
+    <div class="example d-flex" style="height:100px;">
+      <div class="items-start">items-start</div>
+      <div class="items-center">items-center</div>
+      <div class="items-end">items-end</div>
+      <div class="items-stretch">items-stretch</div>
+      <div class="items-baseline">items-baseline</div>
+    </div>
+    <pre><code>&lt;div class="d-flex items-center"&gt;...&lt;/div&gt;</code></pre>
+  </section>
+
+  <!-- Responsive Display -->
+  <section>
+    <h2>Responsive Display Utilities</h2>
+    <div class="example">
+      <div class="d-540-none">Hidden below 540px (d-none-540)</div>
+      <div class="d-720-block">Shown from 720px+ (d-block-720)</div>
+      <div class="d-960-flex">Flex from 960px+ (d-flex-960)</div>
+      <div class="flex-1140-column">Flex column 1140px+</div>
+      <div class="justify-1460-center">Justify center 1460px+</div>
+      <div class="items-1920-end">Items end 1920px+</div>
+    </div>
+    <pre><code>&lt;div class="d-none-540"&gt;Hidden&lt;/div&gt;
+&lt;div class="d-flex-960 flex-column-1140 justify-center-1460"&gt;...&lt;/div&gt;</code></pre>
+  </section>
+
+  <script src="../dist/js/dooble-ui-bundle.js"></script>
+
+</body>
+</html>

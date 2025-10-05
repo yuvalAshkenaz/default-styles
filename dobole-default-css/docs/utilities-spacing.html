@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacing & Display Utilities – Dooble UI Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .example-box {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 1rem;
+      border-radius: .5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .example-wrapper {
+      margin-bottom: 2rem;
+    }
+    code {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Spacing & Display Utilities</h1>
+  <p>Part of <strong>Dooble UI</strong> — a utility system inspired by Bootstrap 5.3, auto-generated from SCSS mixins and your project breakpoints.</p>
+
+  <!-- Section: Spacing -->
+  <section class="example-wrapper">
+    <h2>Spacing Utilities</h2>
+    <p>Use margin (<code>m</code>) and padding (<code>p</code>) classes to control spacing. Combine with direction (<code>t</code>, <code>b</code>, <code>x</code>, <code>y</code>) and breakpoint suffixes.</p>
+
+    <div class="example-box m-3">.m-3</div>
+    <div class="example-box p-4">.p-4</div>
+    <div class="example-box mt-5 mb-2">.mt-5 .mb-2</div>
+    <div class="example-box mx-3-960">.mx-3-960 (applies from 960px)</div>
+
+<pre><code>&lt;div class="m-3"&gt;...&lt;/div&gt;
+&lt;div class="p-4"&gt;...&lt;/div&gt;
+&lt;div class="mt-5 mb-2"&gt;...&lt;/div&gt;
+&lt;div class="mx-3-960"&gt;...&lt;/div&gt;
+</code></pre>
+  </section>
+
+  <!-- Section: Border Radius -->
+  <section class="example-wrapper">
+    <h2>Border Radius Utilities</h2>
+    <p>Control corner rounding with <code>.rounded</code> classes. Options include <code>.rounded-0</code> to <code>.rounded-4</code>, as well as <code>.rounded-top</code>, <code>.rounded-pill</code> and more.</p>
+
+    <div class="example-box rounded">.rounded</div>
+    <div class="example-box rounded-3">.rounded-3</div>
+    <div class="example-box rounded-pill">.rounded-pill</div>
+    <div class="example-box rounded-top">.rounded-top</div>
+
+<pre><code>&lt;div class="rounded"&gt;...&lt;/div&gt;
+&lt;div class="rounded-3"&gt;...&lt;/div&gt;
+&lt;div class="rounded-pill"&gt;...&lt;/div&gt;
+&lt;div class="rounded-top"&gt;...&lt;/div&gt;
+</code></pre>
+  </section>
+
+  <!-- Section: Display -->
+  <section class="example-wrapper">
+    <h2>Display Utilities</h2>
+    <p>Toggle visibility with <code>.d-*</code> classes. Works responsively with your defined breakpoints.</p>
+
+    <div class="example-box d-block">.d-block</div>
+    <div class="example-box d-inline-block">.d-inline-block</div>
+    <div class="example-box d-flex justify-content-center align-items-center" style="height:80px;">.d-flex</div>
+
+<pre><code>&lt;div class="d-block"&gt;...&lt;/div&gt;
+&lt;div class="d-inline-block"&gt;...&lt;/div&gt;
+&lt;div class="d-flex justify-content-center align-items-center"&gt;...&lt;/div&gt;
+</code></pre>
+  </section>
+
+  <!-- Section: Responsive -->
+  <section class="example-wrapper">
+    <h2>Responsive Modifiers</h2>
+    <p>Apply breakpoints to any utility class (e.g. <code>-960</code>, <code>-1140</code>, <code>-1460</code>) to make them responsive.</p>
+
+    <div class="example-box d-block d-flex-960 justify-content-center">
+      .d-flex-960 (applies flex from 960px)
+    </div>
+
+<pre><code>&lt;div class="d-block d-flex-960 justify-content-center"&gt;...&lt;/div&gt;
+</code></pre>
+  </section>
+
+  <!-- Section: Summary -->
+  <section>
+    <h2>Summary</h2>
+    <ul>
+      <li><strong>Spacing:</strong> m / p + direction + size + optional breakpoint (e.g. <code>mt-3-960</code>)</li>
+      <li><strong>Radius:</strong> rounded-[0–4], rounded-circle, rounded-pill</li>
+      <li><strong>Display:</strong> d-[block|flex|none] + breakpoint</li>
+      <li><strong>Breakpoints:</strong> 540, 720, 960, 1140, 1460, 1920</li>
+    </ul>
+  </section>
+</body>
+</html>

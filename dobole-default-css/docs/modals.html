@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal - Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Modal - Documentation</h1>
+  <p>Demonstration of elegant, accessible modals for text, images, videos, and iframes.</p>
+
+  <!-- Triggers -->
+  <button class="btn" data-modal-target="#textModal">Open Text Modal</button>
+  <button class="btn btn-secondary" data-modal-target="#imageModal">Open Image Modal</button>
+  <button class="btn btn-success" data-modal-target="#videoModal">Open Video Modal</button>
+
+  <!-- Text Modal -->
+  <div class="modal-backdrop"></div>
+  <div class="modal" id="textModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-header">
+      <span>Text Modal</span>
+      <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>This is an elegant modal with a simple text content. It supports keyboard navigation and closes with ESC.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal-backdrop"></div>
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-header">
+      <span>Image Modal</span>
+      <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="https://picsum.photos/800/450" alt="Sample image">
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="modal-backdrop"></div>
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-header">
+      <span>Video Modal</span>
+      <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="../dist/js/dooble-ui-bundle.js"></script>
+  
+</body>
+</html>

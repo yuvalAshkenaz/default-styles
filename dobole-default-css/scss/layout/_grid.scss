@@ -1,0 +1,87 @@
+// GRID SYSTEM (עד 12 עמודות)
+
+$columns: 12; // סה״כ עמודות
+
+// Mixin ליצירת עמודה
+@mixin make-col($size, $columns: $columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+// Row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -0.5rem;
+}
+
+// Col בסיסי
+[class^="col-"] {
+  padding-inline: 0.5rem;
+}
+
+// Col ברירת מחדל (mobile-first)
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    @include make-col($i);
+  }
+}
+
+// Containers לפי הגדלים שלך
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @each $bp, $value in $container-sizes {
+    @media (min-width: $value) {
+      max-width: $value;
+    }
+  }
+}
+
+// Responsive columns לפי breakpoints שלך
+@each $bp, $value in $breakpoints {
+  @for $i from 1 through $columns {
+    .col-#{$bp}-#{$i} {
+      @media (min-width: $value) {
+        @include make-col($i);
+      }
+    }
+  }
+}
+
+// Offset classes
+@for $i from 1 through $columns {
+  .offset-#{$i} {
+    margin-left: percentage($i / $columns);
+  }
+}
+
+// Responsive offsets
+@each $bp, $value in $breakpoints {
+  @for $i from 1 through $columns {
+    .offset-#{$bp}-#{$i} {
+      @media (min-width: $value) {
+        margin-left: percentage($i / $columns);
+      }
+    }
+  }
+}
+
+// Order classes
+@for $i from 1 through $columns {
+  .order-#{$i} {
+    order: $i;
+  }
+}
+
+@each $bp, $value in $breakpoints {
+  @for $i from 1 through $columns {
+    .order-#{$bp}-#{$i} {
+      @media (min-width: $value) {
+        order: $i;
+      }
+    }
+  }
+}

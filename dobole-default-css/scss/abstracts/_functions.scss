@@ -1,0 +1,80 @@
+// ---------------------------
+// FUNCTIONS
+// ---------------------------
+@function bp($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+// ---------------------------
+// MIXINS
+// ---------------------------
+@mixin respond($break) {
+  @media (min-width: bp($break)) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($cols: 12, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+
+// ---------------------------
+// FLEX UTILITIES RESPONSIVE
+// ---------------------------
+
+// בסיסי
+.flex { @include flex(); }
+.flex-row { @include flex(row); }
+.flex-column { @include flex(column); }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.align-stretch { align-items: stretch; }
+
+// ---------------------------
+// RESPONSIVE FLEX UTILITIES
+// ---------------------------
+
+@each $bp, $px in $breakpoints {
+  // Flex direction
+  .flex-#{$bp} { @include respond($bp) { @include flex(); } }
+  .flex-row-#{$bp} { @include respond($bp) { @include flex(row); } }
+  .flex-column-#{$bp} { @include respond($bp) { @include flex(column); } }
+
+  // Flex wrap
+  .flex-wrap-#{$bp} { @include respond($bp) { flex-wrap: wrap; } }
+  .flex-nowrap-#{$bp} { @include respond($bp) { flex-wrap: nowrap; } }
+
+  // Justify
+  .justify-start-#{$bp} { @include respond($bp) { justify-content: flex-start; } }
+  .justify-center-#{$bp} { @include respond($bp) { justify-content: center; } }
+  .justify-end-#{$bp} { @include respond($bp) { justify-content: flex-end; } }
+  .justify-between-#{$bp} { @include respond($bp) { justify-content: space-between; } }
+
+  // Align items
+  .align-start-#{$bp} { @include respond($bp) { align-items: flex-start; } }
+  .align-center-#{$bp} { @include respond($bp) { align-items: center; } }
+  .align-end-#{$bp} { @include respond($bp) { align-items: flex-end; } }
+  .align-stretch-#{$bp} { @include respond($bp) { align-items: stretch; } }
+}

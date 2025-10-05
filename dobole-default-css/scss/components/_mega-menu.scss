@@ -1,0 +1,71 @@
+// --------------------------------------------------
+// Mega Menu Styles
+// --------------------------------------------------
+$menu-bg: #fff;
+$menu-color: #333;
+$menu-hover-bg: #f0f0f0;
+$menu-width: 300px;
+$menu-gap: 2rem;
+
+.mega-menu {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+
+  > li {
+    position: relative;
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $menu-color;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover, &:focus {
+        background: $menu-hover-bg;
+        outline: none;
+      }
+    }
+
+    // Dropdown
+    ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: $menu-bg;
+      min-width: $menu-width;
+      padding: $menu-gap;
+      display: none;
+      flex-direction: row;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 0.5rem;
+      z-index: 1000;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+          padding: 0.25rem 0.5rem;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &:hover > ul,
+    &:focus-within > ul {
+      display: flex;
+    }
+  }
+}
+
+// Accessibility ARIA
+[aria-haspopup="true"]::after {
+  content: " ▼";
+  font-size: 0.7rem;
+}
