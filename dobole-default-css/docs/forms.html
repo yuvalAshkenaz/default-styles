@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form - Documentation</title>
+  <link rel="stylesheet" href="../dist/css/dooble-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Form - Documentation</h1>
+  <p>Demonstration of SCSS form utilities: floating labels, validation, helper text, and responsive layouts.</p>
+  <section>
+    <h2>Floating Labels</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" id="username" placeholder=" " required>
+        <label for="username">Username</label>
+        <div class="feedback invalid">Username is required</div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder=" " required>
+        <label for="email">Email</label>
+        <div class="feedback valid">Looks good!</div>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required>
+        <label for="password">Password</label>
+        <div class="feedback invalid">Password must be at least 8 characters</div>
+      </div>
+
+      <div class="form-group">
+        <select id="role" required>
+          <option value="" disabled selected></option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+        </select>
+        <label for="role">Role</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder=" " rows="3"></textarea>
+        <label for="message">Message</label>
+        <div class="feedback valid">Optional message</div>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <pre><code>&lt;div class="form-group"&gt;
+  &lt;input type="text" placeholder=" " /&gt;
+  &lt;label&gt;Username&lt;/label&gt;
+  &lt;div class="feedback invalid"&gt;Error message&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <script src="../dist/js/dooble-ui-bundle.js"></script>
+  
+</body>
+</html>

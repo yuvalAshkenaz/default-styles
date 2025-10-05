@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  },
+  "name": "default-styles",
+  "version": "1.0.0",
+  "description": "https://cdn.jsdelivr.net/gh/yuvalAshkenaz/default-styles/default-styles.css",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild js/main.js --bundle --outfile=js/bundle.js --minify --sourcemap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvalAshkenaz/default-styles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuvalAshkenaz/default-styles/issues"
+  },
+  "homepage": "https://github.com/yuvalAshkenaz/default-styles#readme"
+}
