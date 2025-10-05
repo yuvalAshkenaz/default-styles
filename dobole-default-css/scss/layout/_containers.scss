@@ -1,5 +1,0 @@
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
-
-// Generate container classes
-@include generate-containers($container-sizes);

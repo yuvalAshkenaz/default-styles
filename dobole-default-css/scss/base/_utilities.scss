@@ -1,5 +1,0 @@
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
-
-// Generate utilities classes
-@include generate-utilities($breakpoints);
