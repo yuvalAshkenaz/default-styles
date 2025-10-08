@@ -1,5 +1,5 @@
 /*
-v1.1 29/09/2025
+v1.0.1 08/10/2025
 https://cdn.jsdelivr.net/gh/yuvalAshkenaz/default-styles/default-styles.css
 */
 @media (prefers-reduced-motion: no-preference) {
@@ -97,7 +97,6 @@ html {
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
-	margin: 0 !important;
 }
 .sr-zones-nav-a {
 	background: yellow;
@@ -343,4 +342,5 @@ html #wpadminbar {
 	transition-delay: 1.2s;
 
 }
+
 
